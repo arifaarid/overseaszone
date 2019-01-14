@@ -19,7 +19,7 @@
     body,
     header,
     .carousel {
-      height: 60vh;
+      height: 80vh;
     }
 
     @media (max-width: 740px) {
@@ -42,14 +42,28 @@
 
     footer.page-footer .footer-copyright {
     overflow: hidden;
-    background-color: #e6ffff;
+    background-color: #f5fbfe;
     color: black;
     font-size: 15px;
 }
 
-.white {
-background-color: orange!important;
 
+.pt-4, .py-4 {
+    padding-top: 0rem!important;
+}
+
+.white {
+background-color: #f26623 !important;
+color: white;
+-webkit-transition: .35s;
+-o-transition: .35s;
+transition: .35s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar{
+  display: flex;
 }
 
 .navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
@@ -57,8 +71,7 @@ background-color: orange!important;
     -webkit-transition: .35s;
     -o-transition: .35s;
     transition: .35s;
-      font-size: 14px;
-          font-style: Bold;
+      font-size: 20px;
 }
 
 .container-label {
@@ -74,7 +87,7 @@ background-color: orange!important;
 }
 
 .container-label h1 span {
-    background-color: #e6ffff;
+    background-color: #f5fbfe;
     position: relative;
 }
 
@@ -82,18 +95,160 @@ background-color: orange!important;
 
   text-align: left!important;
 }
-  </style>
+
+  .bg-logo{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    float: left;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
+  #container-logo-inner {
+    width: 250px;
+    height: 58px;
+    margin: 0 0 0 -10px;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    background: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image {
+    position: absolute;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+  }
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #66b3ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 100%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 20px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.signupbtn{
+background-color: black;
+}
+    </style>
+
 </head>
 
-<body   style="background-color: #e6ffff;">
+<body   style="background-color: #f5fbfe;">
 
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
-
+  <nav class="navbar-expand-lg navbar-light white scrolling-navbar ">
       <!-- Brand -->
-      <a 	img src="images/icons/logo.png" alt="IMG-LOGO" class="navbar-brand waves-effect" href="home-page.html" target="_blank">
-      </a>
+        <a	img src="images/icons/logo.png" alt="IMG-LOGO" class="navbar-brand waves-effect bg-logo" href="home-page.html" target="_blank">
+        </a>
 
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -107,7 +262,11 @@ background-color: orange!important;
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <a href="home-page.html" class="logo">
-            <img src="img/icons/logo.png" type="image/png">
+            <div class="container">
+              <div id="container-logo-inner">
+                <div class="image"><img src="img/icons/logo.png" type="image/png"></div>
+              </div>
+            </div>
           </a>
         </ul>
 
@@ -115,40 +274,45 @@ background-color: orange!important;
         <ul class="navbar-nav nav-flex-icons" >
           <li class="nav-item">
             <a href="home-page.html" class="nav-link waves-effect">
-              <i>HOME</i>
+              <b>HOME</b>
             </a>
           </li>
           <li class="nav-item">
           <a href="languange-program.html" class="nav-link waves-effect">
-              <i>LANGUANGE <br>PROGRAM</i>
+              <b>LANGUANGE <br>PROGRAM</b>
             </a>
           </li>
           <li class="nav-item">
           <a href="vocational-program.html" class="nav-link waves-effect">
-              <i>VOCATIONAL <br>PROGRAM</i>
+              <b>VOCATIONAL <br>PROGRAM</b>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link waves-effect">
-              <i>ONLINE <br>PROGRAM</i>
+              <b>ONLINE <br>PROGRAM</b>
             </a>
           </li>
           <li class="nav-item">
           <a href="higher-degree.html" class="nav-link waves-effect">
-              <i>HIGHER DEGREE <br>PROGRAM</i>
+              <b>HIGHER DEGREE <br>PROGRAM</b>
             </a>
           </li>
           <li class="nav-item">
           <a href="financing-program.html" class="nav-link waves-effect">
-              <i>FINANCING</i>
+              <b>FINANCING</b>
             </a>
+          </li>
+          <li class="nav-item">
+            <button class="signupbtn nav-link waves-effect">
+              <b>SIGN UP</b>
+            </button>
           </li>
         </ul>
 
+
       </div>
 
-    </div>
-  </nav>
+    </nav>
   <!-- Navbar -->
 
   <!--Carousel Wrapper-->
@@ -664,7 +828,134 @@ background-color: orange!important;
     </div>
 
 
+    <div class="container">
+      <div class="container-label">
+        <strong>
+        <h1><span style="font-weight: bold;">Step Private Consultation</span></h1>
+      </strong>
+        <br></br>
+          <br></br>
+        <section class="text-center mb-4">
+          <div class="row wow fadeIn">
+            <div class="col-lg-3 col-md-6 mb-4" style=" max-width: 20%; text-align: left">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/step/step1.png" alt="">
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+              <!--Category & Title-->
+              <h4>
+                <strong>
+                  <a href="" class="dark-grey-text">Choose Your Program
+                  </a>
+                </strong>
+              </h4>
+            <!--Card content-->
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" style=" max-width: 20%; text-align: left">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/step/step2.png"  alt="">
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+              <!--Category & Title-->
+              <a href="" class="grey-text">
+              <h4>
+                <strong>
+                  <a href="" class="dark-grey-text">Booking Consultation
+                  </a>
+                </strong>
+              </h4>
+            <!--Card content-->
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" style=" max-width: 20%; text-align: left">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/step/step3.png" alt="">
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+              <!--Category & Title-->
+              <a href="" class="grey-text">
+              <h4>
+                <strong>
+                  <a href="" class="dark-grey-text">Pay Ticket Booking
+                  </a>
+                </strong>
+              </h4>
+            <!--Card content-->
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" style=" max-width: 20%; text-align: left">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/step/step4.png"  alt="">
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+              <!--Category & Title-->
+              <a href="" class="grey-text">
+              <h4>
+                <strong>
+                  <a href="" class="dark-grey-text">Get Email Confirmation
+                  </a>
+                </strong>
+              </h4>
+            <!--Card content-->
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" style=" max-width: 20%; text-align: left">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/step/step5.png" alt="">
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+              <!--Category & Title-->
+              <a href="" class="grey-text">
+              <h4>
+                <strong>
+                  <a href="" class="dark-grey-text">Consultation with Our CS
+                  </a>
+                </strong>
+              </h4>
+            <!--Card content-->
+          </div>
+          </div>
+      </section>
+      </div>
+    </div>
 
+    <div class="container">
+      <div class="container-label">
+        <h1><span style="    font-weight: bold;">Form Registration</span></h1>
+        <section class="text-center mb-4">
+          <div>
+  <form class="modal-content" style="  border: none;" action="">
+    <div class="container" style="    font-size: 18px;   text-align: left!important; ">
+
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="" name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="" name="email" required>
+
+      <label for="phone"><b>Phone</b></label>
+      <input type="text" placeholder="" name="phone" required>
+
+      <label for="address"><b>Address</b></label>
+      <input type="text" placeholder="" name="address" required>
+
+      <div class="clearfix">
+        <button type="submit"  style="margin-left:350px;" class="btn btn-primary"><strong><h1>APPLY<h1></strong></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+      </section>
+      </div>
+    </div>
   </main>
   <!--Main layout-->
 
@@ -673,16 +964,14 @@ background-color: orange!important;
 <br>
 
   <!--Footer-->
-  <footer class="page-footer text-center font-medium mt-4 wow fadeIn bg">
-
+  <footer class="page-footer text-left font-medium mt-4 wow fadeIn bg">
+    <div class="footer">
+    </div>
     <!--Copyright-->
-    <div class="footer-copyright py-3">
-      <a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-      <a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-      <a href="#" class="fs-18 color1 p-r-20 fa fa-whatsapp"></a>
-      <a href="#" class="fs-18 color1 p-r-20 fa fa-twitter"></a>
+    <div class="footer-copyright py-3" style="padding-left: 120px;">
       <strong>  copyright www.overseaszone.com - 2019
       </strong>
-      </div>
-      </footer>
+    </div>
+  </footer>
+
 </html>
